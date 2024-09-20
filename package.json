@@ -1,0 +1,22 @@
+{
+  "name": "crm-dashboard-customers",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/crm-dashboard-customers/",
+    "preview": "vite preview",
+    "watch": "npx vite build --watch"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  },
+  "dependencies": {
+    "glob": "^11.0.0",
+    "sass": "^1.79.2",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2",
+    "vite-plugin-image-optimizer": "^1.1.8"
+  }
+}
