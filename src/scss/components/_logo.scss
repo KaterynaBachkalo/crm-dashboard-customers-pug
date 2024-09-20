@@ -1,0 +1,22 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.logo {
+  @extend %main-title;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  color: fn.get-color("dark");
+
+  @include mx.mq("lg") {
+    padding: 37px 28px;
+  }
+}
+
+.logo-icon {
+  stroke: fn.get-color("dark");
+}
