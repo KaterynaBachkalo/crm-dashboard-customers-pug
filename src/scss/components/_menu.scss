@@ -88,7 +88,7 @@
   justify-content: space-between;
 
   color: fn.get-color("side-light-grey");
-  stroke: fn.get-color("side-light-grey");
+  fill: fn.get-color("side-light-grey");
 
   &:hover,
   &:focus,
@@ -96,7 +96,6 @@
     border-radius: 8px;
 
     background-color: fn.get-color("background-selected");
-    stroke: fn.get-color("light");
     fill: fn.get-color("light");
     color: fn.get-color("light");
   }
