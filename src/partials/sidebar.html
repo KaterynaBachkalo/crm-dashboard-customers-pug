@@ -6,83 +6,127 @@
       aria-label="Close menu"
     >
       <svg class="menu-btn-icon" width="20" height="20">
-        <use href="./src/img/sprite.svg#icon-x-close"></use>
+        <use href="img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <button
+      class="menu-btn js-menu-open"
+      type="button"
+      aria-expanded="false"
+      aria-controls="sidebar-menu"
+    >
+      <svg class="menu-btn-icon" width="24" height="24">
+        <use href="./src/img/icons.svg#icon-menu"></use>
       </svg>
     </button>
 
     <a class="logo" href="./index.html">
       <svg class="logo-icon" width="37" height="37">
-        <use xlink:href="../img/sprite.svg#icon-logo"></use>
+        <use href="/img/sprite.svg#icon-logo"></use>
       </svg>
-      Dashboard
+      <div>
+        Dashboard
+        <span class="version">v.01</span>
+      </div>
     </a>
 
     <ul class="menu-list">
       <li class="menu-item">
-        <a class="menu-link current" href="./index.html">
-          <svg class="menu-icon" width="20" height="20">
-            <use href="./src/img/icons.svg#menu-columns"></use>
-          </svg>
-          Overview
+        <a class="menu-link" href="./index.html">
+          <div class="menu-wrap">
+            <svg class="menu-icon" width="24" height="24">
+              <use href="/img/sprite.svg#icon-key-square"></use>
+            </svg>
+            Dashboard
+          </div>
         </a>
       </li>
+
       <li class="menu-item">
         <a class="menu-link" href="">
-          <svg class="menu-icon" width="20" height="20">
-            <use href="./src/img/icons.svg#menu-person-plus"></use>
+          <div class="menu-wrap">
+            <svg class="menu-icon" width="24" height="24">
+              <use href="/img/sprite.svg#icon-d-square"></use>
+            </svg>
+            Product
+          </div>
+          <svg class="menu-icon" width="16" height="16">
+            <use href="/img/sprite.svg#icon-chevron-right"></use>
           </svg>
-          Contacts
         </a>
       </li>
+
       <li class="menu-item">
-        <a class="menu-link" href="./companies.html">
-          <svg class="menu-icon" width="20" height="20">
-            <use href="./src/img/icons.svg#menu-briefcase"></use>
+        <a class="menu-link current" href="">
+          <div class="menu-wrap">
+            <svg class="menu-icon" width="24" height="24">
+              <use href="/img/sprite.svg#icon-user-square"></use>
+            </svg>
+            Customers
+          </div>
+          <svg class="menu-icon" width="16" height="16">
+            <use href="/img/sprite.svg#icon-chevron-right"></use>
           </svg>
-          Companies
         </a>
       </li>
-      <li class="menu-item">
-        <a class="menu-link" href="">
-          <svg class="menu-icon" width="20" height="20">
-            <use href="./src/img/icons.svg#menu-coin"></use>
-          </svg>
-          Deals
-        </a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link" href="">
-          <svg class="menu-icon" width="20" height="20">
-            <use href="./src/img/icons.svg#menu-clipboard"></use>
-          </svg>
-          Document
-        </a>
-      </li>
+
       <li class="menu-item">
         <a class="menu-link" href="">
-          <svg class="menu-icon" width="20" height="20">
-            <use href="./src/img/icons.svg#menu-envelope"></use>
+          <div class="menu-wrap">
+            <svg class="menu-icon" width="24" height="24">
+              <use href="/img/sprite.svg#icon-wallet-money"></use>
+            </svg>
+            Income
+          </div>
+          <svg class="menu-icon" width="16" height="16">
+            <use href="/img/sprite.svg#icon-chevron-right"></use>
           </svg>
-          Mesage
-          <span class="menu-notification notification is-notify">8</span>
         </a>
       </li>
+
       <li class="menu-item">
         <a class="menu-link" href="">
-          <svg class="menu-icon" width="20" height="20">
-            <use href="./src/img/icons.svg#menu-calendar"></use>
+          <div class="menu-wrap">
+            <svg class="menu-icon" width="24" height="24">
+              <use href="/img/sprite.svg#icon-discount-shape"></use>
+            </svg>
+            Promote
+          </div>
+          <svg class="menu-icon" width="16" height="16">
+            <use href="/img/sprite.svg#icon-chevron-right"></use>
           </svg>
-          Calendar
         </a>
       </li>
+
       <li class="menu-item">
         <a class="menu-link" href="">
-          <svg class="menu-icon" width="20" height="20">
-            <use href="./src/img/icons.svg#menu-journal"></use>
+          <div class="menu-wrap">
+            <svg class="menu-icon" width="24" height="24">
+              <use href="/img/sprite.svg#icon-message-question"></use>
+            </svg>
+            Help
+          </div>
+          <svg class="menu-icon" width="16" height="16">
+            <use href="/img/sprite.svg#icon-chevron-right"></use>
           </svg>
-          Report
         </a>
       </li>
     </ul>
   </nav>
+
+  <div class="user-wrap">
+    <img
+      srcset="/img/Ellipse 8@1x.png, /img/Ellipse 8@2x.png"
+      src="/img/Ellipse 8@1x.png"
+      alt="user photo"
+      class="user-photo-img"
+      width="42"
+      height="42"
+    />
+    <div>
+      <p class="user-name">Evano</p>
+      <p class="user-position">Project Manager</p>
+    </div>
+  </div>
 </aside>
