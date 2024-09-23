@@ -6,17 +6,17 @@
 }
 
 %main-title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.66;
-  letter-spacing: 0.02em;
+  @include mx.font(24, 39, 1, 600);
 }
 
-%section-title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0.025em;
+%table-title {
+  @include mx.font(14, 21, -1, 500);
+  text-align: left;
+}
+
+%table-text {
+  @include mx.font(14, 21, -1, 500);
+  text-align: left;
 }
 
 %main-text {
