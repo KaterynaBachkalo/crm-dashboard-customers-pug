@@ -1,0 +1,14 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.main {
+  padding: 20px;
+  background-color: fn.get-color("background-primary");
+
+  @include mx.mq("lg") {
+    grid-area: main;
+    padding: 41px 95px 258px 71px;
+  }
+}
