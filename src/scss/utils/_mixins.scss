@@ -1,15 +1,18 @@
 @use "sass:map";
 @use "sass:list";
+@use "sass:math";
 
 @use "variables" as var;
 @use "functions" as fn;
 
-@mixin font($_fsz, $_lnh) {
+@mixin font($_fsz, $_lnh, $_ls, $_fw: 400) {
   font-size: #{$_fsz}px;
 
   $result: math.div($_lnh, $_fsz);
 
   line-height: math.div(math.round($result * 100), 100);
+  letter-spacing: #{calc($_ls/100)}em;
+  font-weight: #{$_fw};
 }
 
 @mixin mq($bp: sm, $type: min, $is-retina: false) {
