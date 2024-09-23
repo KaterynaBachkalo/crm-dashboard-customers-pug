@@ -1,8 +1,6 @@
 $breakpoints: (
   "sm": 320px,
-  "md": 768px,
   "lg": 1440px,
-  "xl": 1920px,
 );
 
 $colors: (
@@ -10,6 +8,7 @@ $colors: (
   "dark": #000,
   "side-light-grey": #9197b3,
   "side-dark-grey": #757575,
+  "side-grey": #838383,
   "light-primary": #b5b7c0,
   "light-secondary": #404b52,
   "light-active": #16c098,
