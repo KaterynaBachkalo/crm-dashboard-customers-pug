@@ -7,6 +7,7 @@ body {
   @extend %main-text;
 
   font-family: var.$main-font, sans-serif;
+  font-weight: 400;
   color: fn.get-color("light-secondary");
   background-color: fn.get-color("light");
 }
