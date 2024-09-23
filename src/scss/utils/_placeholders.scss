@@ -1,4 +1,9 @@
 @use "mixins" as mx;
+@use "variables" as var;
+
+%menu-text {
+  @include mx.font(14, 21, -1, 500);
+}
 
 %main-title {
   font-size: 24px;
@@ -19,34 +24,4 @@
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.03em;
-}
-
-%accent-text {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-}
-
-%details {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.43;
-  letter-spacing: 0.04em;
-}
-
-%details-accent {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.42;
-  letter-spacing: 0.04em;
-}
-
-%section-frame {
-  padding: 16px;
-  border-radius: 12px;
-
-  @include mx.mq("lg") {
-    padding: 24px;
-  }
 }
