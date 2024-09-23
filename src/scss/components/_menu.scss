@@ -1,0 +1,127 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: fn.get-color("light");
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 36px 28px 76px 28px;
+
+  @include mx.mq("lg", "max") {
+    grid-area: sidebar;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: initial;
+      visibility: visible;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-btn {
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.logo {
+  @extend %main-title;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: fn.get-color("dark");
+  padding-bottom: 64px;
+}
+
+.version {
+  color: fn.get-color("side-grey");
+  font-family: var.$main-font;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -1%;
+  text-align: left;
+}
+
+.logo-icon {
+  stroke: fn.get-color("dark");
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left: 11px;
+}
+
+.menu-link {
+  @extend %menu-text;
+
+  display: flex;
+  align-items: center;
+  padding: 11px;
+  justify-content: space-between;
+
+  color: fn.get-color("side-light-grey");
+  stroke: fn.get-color("side-light-grey");
+
+  &:hover,
+  &:focus,
+  &.current {
+    border-radius: 8px;
+
+    background-color: fn.get-color("background-selected");
+    stroke: fn.get-color("light");
+    fill: fn.get-color("light");
+    color: fn.get-color("light");
+  }
+}
+
+.menu-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.user-name {
+  color: fn.get-color("dark");
+
+  @include mx.font(14, 21, 1, 500);
+}
+
+.user-position {
+  color: fn.get-color("side-dark-grey");
+
+  @include mx.font(12, 18, 1);
+}
