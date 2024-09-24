@@ -6,6 +6,7 @@
 .main {
   padding: 20px;
   background-color: fn.get-color("background-primary");
+  width: 100%;
 
   @include mx.mq("lg") {
     grid-area: main;
@@ -18,7 +19,6 @@
   @include mx.font(24, 36, 0, 500);
 
   color: fn.get-color("dark");
-  padding-bottom: 51px;
 }
 
 .table-data {
