@@ -1,0 +1,46 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination-btn,
+.pagination-page {
+  padding: 0;
+  width: 26px;
+  height: 24px;
+
+  color: fn.get-color("light-secondary");
+  background-color: fn.get-color("background-pagination");
+  border: 1px solid fn.get-color("border");
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: color, background-color 0.5s ease;
+
+  @extend %pagination-text;
+
+  &:hover {
+    background-color: fn.get-color("background-selected");
+    color: fn.get-color("light");
+  }
+}
+
+.pagination-page:hover,
+.pagination-page:focus,
+.pagination-page.active {
+  background-color: fn.get-color("background-selected");
+  color: fn.get-color("light");
+}
+
+.pagination-dots {
+  @extend %pagination-text;
+
+  color: fn.get-color("dark");
+}
