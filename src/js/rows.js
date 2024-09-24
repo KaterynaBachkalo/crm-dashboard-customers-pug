@@ -11,7 +11,7 @@ data.forEach((customer) => {
     <td class="table-text">${customer.phone}</td>
     <td class="table-text">${customer.email}</td>
     <td class="table-text">${customer.country}</td>
-    <td class="table-text status">${customer.status}</td>
+    <td class="table-text status"><span class="status-block">${customer.status}</span></td>
   `;
 
   table.appendChild(row);
@@ -27,7 +27,7 @@ data.forEach((customer) => {
   table.appendChild(lineRow);
 });
 
-const statuses = document.querySelectorAll(".status");
+const statuses = document.querySelectorAll(".status-block");
 
 statuses.forEach((status) => {
   if (status.textContent === "Active") {
