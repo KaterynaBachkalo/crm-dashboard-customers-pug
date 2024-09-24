@@ -1,5 +1,14 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
 .page {
   display: grid;
-  grid-template-columns: 306px 1fr;
-  grid-template-areas: "sidebar main";
+
+  @include mx.mq("lg") {
+    display: grid;
+    grid-template-columns: 306px 1fr;
+    grid-template-areas: "sidebar main";
+  }
 }
