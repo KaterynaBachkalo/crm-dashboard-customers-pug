@@ -11,6 +11,8 @@
   background-color: fn.get-color("light");
   padding: 36px 28px 76px 28px;
 
+  transform: translate(0);
+
   @include mx.mq("lg", "max") {
     grid-area: sidebar;
 
@@ -22,14 +24,11 @@
     width: 100vw;
     height: 100vh;
 
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+    transform: translate(-100%);
+    transition: transform 0.25s ease-in;
 
     &.is-open {
-      opacity: 1;
-      pointer-events: initial;
-      visibility: visible;
+      transform: translate(0);
     }
   }
 }
