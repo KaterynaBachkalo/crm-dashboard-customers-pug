@@ -35,6 +35,7 @@ export default defineConfig(({ command }) => {
       injectHTML(),
       FullReload(["./src/**/**.html"]),
       ViteImageOptimizer({
+        exclude: /^sprite.svg$/,
         png: {
           quality: 60,
         },
