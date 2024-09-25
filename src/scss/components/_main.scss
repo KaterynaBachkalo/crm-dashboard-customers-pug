@@ -22,18 +22,27 @@
 }
 
 .table-data {
-  padding: 30px 40px 40px;
+  padding: 10px;
 
   background-color: fn.get-color("light");
   border-radius: 30px;
+
+  @include mx.mq("lg") {
+    padding: 30px 40px 40px;
+  }
 }
 
 .title-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding-bottom: 40px;
   padding-right: 13px;
+
+  @include mx.mq("lg") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    padding-right: 13px;
+  }
 }
 
 .title {
@@ -47,6 +56,11 @@
   @include mx.font(14, 21, -1);
 
   color: fn.get-color("light-active");
+  padding-bottom: 20px;
+
+  @include mx.mq("lg") {
+    padding-bottom: 0;
+  }
 }
 
 .input-icon {
@@ -107,9 +121,13 @@
 }
 
 table {
-  width: 100%;
+  min-width: 700px;
   position: relative;
-  padding-bottom: 30px;
+
+  @include mx.mq("lg") {
+    padding-bottom: 30px;
+    min-width: 1440px;
+  }
 }
 
 .table-head {
@@ -190,12 +208,11 @@ table {
   justify-content: space-between;
 }
 
-/* Загальні стилі для рядків таблиці */
 td.status {
-  text-align: center; /* Центруємо текст по горизонталі */
-  vertical-align: middle; /* Вирівнюємо текст по вертикалі */
+  text-align: center;
+  vertical-align: middle;
 }
 
 td {
-  vertical-align: middle; /* Вирівнюємо всі комірки по вертикалі */
+  vertical-align: middle;
 }
