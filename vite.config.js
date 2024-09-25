@@ -3,6 +3,7 @@ import { glob } from "glob";
 import injectHTML from "vite-plugin-html-inject";
 import FullReload from "vite-plugin-full-reload";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import svgSpritePlugin from "vite-plugin-svg-sprite";
 
 export default defineConfig(({ command }) => {
   return {
@@ -27,6 +28,10 @@ export default defineConfig(({ command }) => {
       outDir: "../dist",
     },
     plugins: [
+      svgSpritePlugin({
+        symbolId: "icon-[name]", // Форма назви іконки
+        include: ["**/src/img/*.svg"], // Шлях до ваших іконок
+      }),
       injectHTML(),
       FullReload(["./src/**/**.html"]),
       ViteImageOptimizer({
