@@ -3,11 +3,14 @@
 @use "../utils/functions" as fn;
 @use "../utils/mixins" as mx;
 
-.main {
-  padding: 20px;
+.container {
   margin: 0 auto;
   min-width: 280px;
   height: 100vh;
+}
+
+.main {
+  padding: 20px;
 
   @include mx.mq("lg") {
     grid-area: main;

@@ -3,9 +3,13 @@
 @use "../utils/functions" as fn;
 @use "../utils/mixins" as mx;
 
+.sidebar-container {
+  min-width: 280px;
+}
+
 .sidebar {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 
   position: fixed;
   top: 0;
