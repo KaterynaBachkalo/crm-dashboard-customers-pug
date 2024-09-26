@@ -6,15 +6,15 @@
 .container {
   margin: 0 auto;
   min-width: 280px;
-  height: 100vh;
 }
 
 .main {
   padding: 20px;
+  margin: 0 auto;
 
   @include mx.mq("lg") {
     grid-area: main;
-    padding: 41px 95px 258px 71px;
+    padding: 41px 95px 0 71px;
     max-width: 1440px;
   }
 }
@@ -123,6 +123,7 @@
   @include mx.mq("lg") {
     padding: 30px 40px 40px;
     width: 968px;
+    // height: 812px;
   }
 }
 
@@ -226,6 +227,8 @@ td.status {
   vertical-align: middle;
 }
 
-td {
+td,
+tr {
   vertical-align: middle;
+  padding: 0;
 }
