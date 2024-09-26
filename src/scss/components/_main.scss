@@ -197,10 +197,15 @@ table {
 }
 
 .line {
-  width: calc(100% + 80px);
-  margin-left: -40px;
+  width: calc(100% + 40px);
+  margin-left: -20px;
   height: 1px;
   background-color: fn.get-color("border");
+
+  @include mx.mq("lg") {
+    width: calc(100% + 80px);
+    margin-left: -40px;
+  }
 }
 
 .linerow {
