@@ -24,22 +24,22 @@
   });
 })();
 
-// Отримуємо елементи
-const sidebar = document.querySelector(".sidebar");
-const body = document.querySelector(".page");
-const main = document.querySelector(".main");
-const openMenuBtn = document.querySelector(".js-menu-open");
-const closeMenuBtn = document.querySelector(".js-menu-close");
+// // Отримуємо елементи
+// const sidebar = document.querySelector(".sidebar");
+// const body = document.querySelector(".page");
+// const main = document.querySelector(".main");
+// const openMenuBtn = document.querySelector(".js-menu-open");
+// const closeMenuBtn = document.querySelector(".js-menu-close");
 
-function toggleSidebar() {
-  if (sidebar.classList.contains("is-open")) {
-    body.classList.add("body-no-scroll");
-    main.classList.add("body-no-scroll");
-  } else {
-    body.classList.remove("body-no-scroll");
-    main.classList.remove("body-no-scroll");
-  }
-}
+// function toggleSidebar() {
+//   if (sidebar.classList.contains("is-open")) {
+//     // body.classList.add("body-no-scroll");
+//     main.classList.add("body-no-scroll");
+//   } else {
+//     // body.classList.remove("body-no-scroll");
+//     main.classList.remove("body-no-scroll");
+//   }
+// }
 
-closeMenuBtn.addEventListener("click", toggleSidebar);
-openMenuBtn.addEventListener("click", toggleSidebar);
+// closeMenuBtn.addEventListener("click", toggleSidebar);
+// openMenuBtn.addEventListener("click", toggleSidebar);

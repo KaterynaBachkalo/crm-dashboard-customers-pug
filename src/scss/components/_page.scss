@@ -12,5 +12,6 @@
 }
 
 .body-no-scroll {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
