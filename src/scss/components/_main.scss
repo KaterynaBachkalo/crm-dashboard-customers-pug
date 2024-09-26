@@ -7,11 +7,11 @@
   padding: 20px;
   margin: 0 auto;
   min-width: 280px;
-  max-width: 375px;
 
   @include mx.mq("lg") {
     grid-area: main;
     padding: 41px 95px 258px 71px;
+    max-width: 1440px;
   }
 }
 

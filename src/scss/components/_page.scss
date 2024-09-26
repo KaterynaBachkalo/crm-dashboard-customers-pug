@@ -4,8 +4,6 @@
 @use "../utils/mixins" as mx;
 
 .page {
-  display: grid;
-
   @include mx.mq("lg") {
     display: grid;
     grid-template-columns: 306px 1fr;

@@ -5,8 +5,9 @@
 
 .sidebar {
   grid-area: sidebar;
-  height: 100vh;
-  min-width: 320px;
+  height: 100%;
+  width: 100%;
+
   position: fixed;
   top: 0;
   left: 0;
