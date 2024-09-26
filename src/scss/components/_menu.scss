@@ -6,7 +6,7 @@
 .sidebar {
   grid-area: sidebar;
   height: 100%;
-  width: 100%;
+  min-width: 320px;
   position: fixed;
   top: 0;
   left: 0;
@@ -64,6 +64,7 @@
   flex-direction: column;
   gap: 18px;
   padding-left: 11px;
+  padding-bottom: 20px;
 }
 
 .menu-link {
