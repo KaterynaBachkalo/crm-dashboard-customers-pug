@@ -10,3 +10,7 @@
     grid-template-areas: "sidebar main";
   }
 }
+
+.body-no-scroll {
+  overflow: hidden;
+}
