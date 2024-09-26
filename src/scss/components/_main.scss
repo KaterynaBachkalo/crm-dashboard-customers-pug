@@ -21,19 +21,6 @@
   color: fn.get-color("dark");
 }
 
-.table-data {
-  padding: 20px;
-  min-width: 740px;
-
-  background-color: fn.get-color("light");
-  border-radius: 30px;
-
-  @include mx.mq("lg") {
-    padding: 30px 40px 40px;
-    width: 968px;
-  }
-}
-
 .title-wrap {
   padding-bottom: 40px;
   padding-right: 13px;
@@ -122,6 +109,19 @@
   }
 }
 
+.table-data {
+  padding: 20px;
+  min-width: 740px;
+
+  background-color: fn.get-color("light");
+  border-radius: 30px;
+
+  @include mx.mq("lg") {
+    padding: 30px 40px 40px;
+    width: 968px;
+  }
+}
+
 table {
   min-width: 700px;
   position: relative;
@@ -206,8 +206,15 @@ table {
 
 .pagination-wrap {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+
+  @include mx.mq("lg") {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
 td.status {
