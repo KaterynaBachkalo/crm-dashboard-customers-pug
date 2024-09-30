@@ -4,7 +4,7 @@
 @use "../utils/mixins" as mx;
 
 body {
-  @extend %main-text;
+  @extend %table-text;
 
   font-family: var.$main-font, sans-serif;
   font-weight: 400;
