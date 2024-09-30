@@ -8,15 +8,18 @@ const table = document.querySelector(".table");
 
 const toggleMenu = () => {
   const isMenuOpen =
-    openMenuBtn.getAttribute("aria-expanded") === "true" || false;
+    openMenuBtn.getAttribute("aria-expanded") === true || false;
   openMenuBtn.setAttribute("aria-expanded", !isMenuOpen);
   mobileMenu.classList.toggle("is-open");
+  tableWrap.classList.toggle("hidden");
+  table.classList.toggle("hidden");
 };
 
 openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
 menuBtn.forEach((item) => {
   item.addEventListener("click", toggleMenu);
+  item.addEventListener("click", closeSidebar);
 });
 
 window.matchMedia("(min-width: 1440px)").addEventListener("change", (e) => {
@@ -24,18 +27,3 @@ window.matchMedia("(min-width: 1440px)").addEventListener("change", (e) => {
   mobileMenu.classList.remove("is-open");
   openMenuBtn.setAttribute("aria-expanded", false);
 });
-
-const openSidebar = () => {
-  sidebar.classList.add("is-open");
-  tableWrap.classList.add("hidden");
-  table.classList.add("hidden");
-};
-
-const closeSidebar = () => {
-  sidebar.classList.remove("is-open");
-  tableWrap.classList.remove("hidden");
-  table.classList.remove("hidden");
-};
-
-openMenuBtn.addEventListener("click", openSidebar);
-closeMenuBtn.addEventListener("click", closeSidebar);
