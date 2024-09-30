@@ -10,22 +10,23 @@
 }
 
 %table-title {
-  @include mx.font(14, 21, -1, 500);
+  @include mx.font(12, 18, -1, 500);
   text-align: left;
+
+  @include mx.mq("lg") {
+    @include mx.font(14, 21, -1, 500);
+  }
 }
 
 %table-text {
-  @include mx.font(14, 21, -1, 500);
+  @include mx.font(12, 18, -1, 500);
   text-align: left;
+
+  @include mx.mq("lg") {
+    @include mx.font(14, 21, -1, 500);
+  }
 }
 
 %pagination-text {
   @include mx.font(12, 12, -1, 500);
-}
-
-%main-text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
 }
