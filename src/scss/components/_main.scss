@@ -5,16 +5,21 @@
 
 .container {
   min-width: 280px;
-}
-
-.main {
   padding: 20px;
-  margin: 0 auto;
-  width: 100%;
 
   @include mx.mq("lg") {
     padding: 41px 95px 258px 377px;
   }
+}
+
+.table-wrap {
+  min-width: 600px;
+  padding-right: 20px;
+}
+
+.main {
+  margin: 0 auto;
+  width: 100%;
 }
 
 .greeting {
