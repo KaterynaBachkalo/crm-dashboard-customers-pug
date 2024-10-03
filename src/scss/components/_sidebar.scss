@@ -22,6 +22,7 @@
 
   transform: translate(-100%);
   transition: transform 0.25s ease-in;
+  overflow: auto;
 
   &.is-open {
     transform: translate(0);
@@ -57,13 +58,11 @@
 }
 
 .version {
+  @extend %sub-title;
+
   color: fn.get-color("side-grey");
   font-family: var.$main-font;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 15px;
-  letter-spacing: -1%;
-  text-align: left;
+  margin-left: 4px;
 }
 
 .logo-icon {
