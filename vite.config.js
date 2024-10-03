@@ -60,6 +60,6 @@ export default defineConfig(({ command }) => {
       }),
     ],
 
-    base: "/",
+    base: command === "serve" ? "/" : "/crm-dashboard-customers-pug/",
   };
 });
