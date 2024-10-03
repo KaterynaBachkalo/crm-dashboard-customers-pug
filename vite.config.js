@@ -4,6 +4,7 @@ import injectHTML from "vite-plugin-html-inject";
 import FullReload from "vite-plugin-full-reload";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import svgSpritePlugin from "vite-plugin-svg-sprite";
+import pugPlugin from "@vituum/vite-plugin-pug";
 
 export default defineConfig(({ command }) => {
   return {
@@ -11,11 +12,13 @@ export default defineConfig(({ command }) => {
       [command === "serve" ? "global" : "_global"]: {},
     },
     root: "src",
+    assetsInclude: ["**/*.pug"],
     build: {
       sourcemap: true,
 
       rollupOptions: {
-        input: glob.sync("./src/*.html"),
+        input: './src/index.pug',
+        // input: glob.sync("./src/*.{html,pug}"),
         output: {
           manualChunks(id) {
             if (id.includes("node_modules")) {
@@ -29,11 +32,17 @@ export default defineConfig(({ command }) => {
     },
     plugins: [
       svgSpritePlugin({
-        symbolId: "icon-[name]", // Форма назви іконки
-        include: ["**/src/img/*.svg"], // Шлях до ваших іконок
+        symbolId: "icon-[name]",
+        include: ["**/src/img/*.svg"],
       }),
       injectHTML(),
-      FullReload(["./src/**/**.html"]),
+      pugPlugin({
+        pugOptions: {
+          doctype: 'html', // установка типа документа
+          pretty: true     // форматированный HTML для чтения
+        }
+      }),
+      FullReload(["./src/**/**.pug", "./src/**.pug", "./src/**/**.html"]),
       ViteImageOptimizer({
         exclude: /^sprite.svg$/,
         png: {
@@ -51,6 +60,6 @@ export default defineConfig(({ command }) => {
       }),
     ],
 
-    base: "/crm-dashboard-customers/",
+    base: command === "serve" ? "/" : "/crm-dashboard-customers-pug/",
   };
 });
