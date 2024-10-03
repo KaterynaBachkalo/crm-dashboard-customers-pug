@@ -46,4 +46,6 @@
   @extend %pagination-text;
 
   color: fn.get-color("dark");
+  border: none;
+  background: none;
 }
