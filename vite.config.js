@@ -16,7 +16,10 @@ export default defineConfig(({ command }) => {
       sourcemap: true,
 
       rollupOptions: {
-        input: './src/index.pug',
+        input: {
+          main: './src/index.pug',
+          customers: "./src/customers.pug"
+        },
         output: {
           manualChunks(id) {
             if (id.includes("node_modules")) {
