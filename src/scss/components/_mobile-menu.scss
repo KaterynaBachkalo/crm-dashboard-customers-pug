@@ -51,6 +51,10 @@
   background-color: fn.get-color("background-primary");
 
   cursor: pointer;
+  transition-property: background-color fill, transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0;
 
   &.is-open {
     display: none;
@@ -69,4 +73,10 @@
   @include mx.mq("lg") {
     display: none;
   }
+}
+
+.close-menu-btn:hover{
+  background-color: fn.get-color("light-primary");
+  fill: fn.get-color("light");
+  transform: rotate(180deg);
 }
