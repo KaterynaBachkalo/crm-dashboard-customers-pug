@@ -1,3 +1,16 @@
+mixin menuItems(items)
+  ul.menu-list
+    each item in items
+      li.menu-item
+        a.menu-link(class=(item.current ? "current" : "") href=item.href)
+          .menu-wrap
+            svg.menu-icon(width="24" height="24")
+              use(href=`/img/sprite.svg#${item.icon}`)
+            | #{item.label}
+          svg.menu-icon(width="16" height="16")
+            use(href="/img/sprite.svg#icon-chevron-right")
+
+
 .sidebar-container
   aside.sidebar.js-menu#sidebar-menu
     nav.menu
@@ -10,60 +23,15 @@
           use(href="/img/sprite.svg#icon-logo")
         div Dashboard<span class="version">v.01</span>
 
-      ul.menu-list
-        li.menu-item
-          a.menu-link(href="./index.html")
-            .menu-wrap
-              svg.menu-icon(width="24" height="24")
-                use(href="/img/sprite.svg#icon-key-square")
-              | Dashboard
-
-        li.menu-item
-          a.menu-link(href="")
-            .menu-wrap
-              svg.menu-icon(width="24" height="24")
-                use(href="/img/sprite.svg#icon-d-square")
-              | Product
-            svg.menu-icon(width="16" height="16")
-              use(href="/img/sprite.svg#icon-chevron-right")
-
-        li.menu-item
-          a.menu-link.current(href="")
-            .menu-wrap
-              svg.menu-icon(width="24" height="24")
-                use(href="/img/sprite.svg#icon-user-square")
-              | Customers
-            svg.menu-icon(width="16" height="16")
-              use(href="/img/sprite.svg#icon-chevron-right")
-
-        li.menu-item
-          a.menu-link(href="")
-            .menu-wrap
-              svg.menu-icon(width="24" height="24")
-                use(href="/img/sprite.svg#icon-wallet-money")
-              | Income
-            svg.menu-icon(width="16" height="16")
-              use(href="/img/sprite.svg#icon-chevron-right")
-
-
-        li.menu-item
-          a.menu-link(href="")
-            .menu-wrap
-              svg.menu-icon(width="24" height="24")
-                use(href="/img/sprite.svg#icon-discount-shape")
-              | Promote
-            svg.menu-icon(width="16" height="16")
-              use(href="/img/sprite.svg#icon-chevron-right")
-
-
-        li.menu-item
-          a.menu-link(href="")
-            .menu-wrap
-              svg.menu-icon(width="24" height="24")
-                use(href="/img/sprite.svg#icon-message-question")
-              | Help
-            svg.menu-icon(width="16" height="16")
-              use(href="/img/sprite.svg#icon-chevron-right")
+    
+      +menuItems([
+        { label: "Dashboard", href: "./index.html", icon: "icon-key-square" },
+        { label: "Product", href: "", icon: "icon-d-square"},
+        { label: "Customers", href: "./customers.html", icon: "icon-user-square", current: true },
+        { label: "Income", href: "", icon: "icon-wallet-money" },
+        { label: "Promote", href: "", icon: "icon-discount-shape" },
+        { label: "Help", href: "", icon: "icon-message-question" }
+      ])
 
     .user-wrap
       img(srcset="/img/user@1x.png, /img/user@2x.png" src="/img/user@1x.png" alt="user photo" class="user-photo-img" width="42" height="42")
