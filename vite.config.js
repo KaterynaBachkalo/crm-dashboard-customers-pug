@@ -57,7 +57,7 @@ export default defineConfig(({ command }) => {
         },
       }),
     ],
-    // assetsInclude: ["**/*.pug"],
+
     base: command === "serve"? "/": "/crm-dashboard-customers-pug/",
   };
 });
