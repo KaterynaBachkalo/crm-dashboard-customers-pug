@@ -11,14 +11,37 @@ const toggleMenu = () => {
   openMenuBtn.getAttribute("aria-expanded") === true || false;
   openMenuBtn.setAttribute("aria-expanded", !isMenuOpen);
   mobileMenu.classList.toggle("is-open");
-  tableWrap.classList.toggle("hidden");
-  table.classList.toggle("hidden");
 };
 
-openMenuBtn.addEventListener("click", toggleMenu);
-closeMenuBtn.addEventListener("click", toggleMenu);
+const openMenu = () => {
+  tableWrap.classList.add("hidden");
+  table.classList.add("hidden");
+};
+
+const closeMenu = () => {
+  if (tableWrap.classList.contains("hidden")) {
+    tableWrap.classList.remove("hidden");
+    table.classList.remove("hidden");
+  }
+};
+
+
+openMenuBtn.addEventListener("click", () => {
+  toggleMenu();
+  openMenu();
+});
+closeMenuBtn.addEventListener("click", () => {
+  toggleMenu();
+  closeMenu();
+});
+
 menuBtn.forEach((item) => {
-  item.addEventListener("click", toggleMenu);
+  item.addEventListener("click", () => {
+    if (mobileMenu.classList.contains("is-open")) {
+      mobileMenu.classList.remove("is-open");
+      closeMenu(); 
+    }
+  });
 });
 
 window.matchMedia("(min-width: 1440px)").addEventListener("change", (e) => {
