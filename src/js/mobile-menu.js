@@ -8,7 +8,7 @@ const table = document.querySelector(".table");
 
 const toggleMenu = () => {
   const isMenuOpen =
-    openMenuBtn.getAttribute("aria-expanded") === true || false;
+  openMenuBtn.getAttribute("aria-expanded") === true || false;
   openMenuBtn.setAttribute("aria-expanded", !isMenuOpen);
   mobileMenu.classList.toggle("is-open");
   tableWrap.classList.toggle("hidden");
@@ -19,7 +19,6 @@ openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
 menuBtn.forEach((item) => {
   item.addEventListener("click", toggleMenu);
-  item.addEventListener("click", closeSidebar);
 });
 
 window.matchMedia("(min-width: 1440px)").addEventListener("change", (e) => {
