@@ -1,11 +1,22 @@
 const menuItems = document.querySelectorAll(".menu-link");
 
-menuItems.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
+const setActiveMenuLink = () => {
+  const currentPath = window.location.pathname;
 
-    menuItems.forEach((link) => link.classList.remove("current"));
+  menuItems.forEach((item) => {
+    const itemHref = new URL(item.getAttribute("href"), window.location.origin).pathname;
 
-    this.classList.add("current");
+    if (itemHref === currentPath) {
+      item.classList.add("current");
+    } else {
+      item.classList.remove("current");
+    }
   });
+};
+
+document.addEventListener("DOMContentLoaded", setActiveMenuLink);
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", setActiveMenuLink);
 });
+
