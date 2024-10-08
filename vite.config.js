@@ -61,6 +61,6 @@ export default defineConfig(({ command }) => {
       }),
     ],
 
-    base: "/customers.html",
+    base: command === "serve"? "/customers.html": "/crm-dashboard-customers-pug/customers.html",
   };
 });
