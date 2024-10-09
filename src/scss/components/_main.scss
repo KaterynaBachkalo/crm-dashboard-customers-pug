@@ -135,6 +135,7 @@
 
   background-color: fn.get-color("light");
   border-radius: 30px;
+  box-shadow: var.$shadow;
 
   @include mx.mq("lg") {
     padding: 30px 40px 40px;
