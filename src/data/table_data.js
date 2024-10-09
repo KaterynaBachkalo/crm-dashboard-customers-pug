@@ -1,4 +1,4 @@
-const data = [
+const customers = [
   {
     name: "Jane Cooper",
     company: "Microsoft",
@@ -65,4 +65,4 @@ const data = [
   },
 ];
 
-export default data;
+export default customers;
