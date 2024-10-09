@@ -1,0 +1,34 @@
+section.table-wrap
+  .table-data
+    .title-wrap
+      div
+        h3.title All Customers
+        p.subtitle Active Members
+      label.label
+        svg.input-icon(width="24px" height="24px")
+          use(href="/img/sprite.svg#icon-search")
+
+        input.input(type="text" placeholder="Search")
+
+    table.table
+      thead
+        tr
+          th.table-head Customer Name
+          th.table-head Company
+          th.table-head Phone Number
+          th.table-head Email
+          th.table-head Country
+          th.table-head.status Status
+
+      tbody
+        tr
+          td(colspan="6")
+            .line
+        script(type="module" src="/js/rows.js")
+
+    .pagination-wrap
+      p.show-data Showing data 1 to 8 of 256K entries
+
+      include pagination.pug
+
+
