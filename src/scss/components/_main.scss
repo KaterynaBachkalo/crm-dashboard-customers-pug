@@ -17,6 +17,11 @@
   padding-right: 20px;
 }
 
+.section-wrap{
+  width: 100%;
+  padding-right: 20px;
+}
+
 .main {
   margin: 0 auto;
   width: 100%;
@@ -125,7 +130,7 @@
   }
 }
 
-.table-data {
+.table-data, .background-wrap {
   padding: 20px;
   min-width: 560px;
 
@@ -135,6 +140,10 @@
   @include mx.mq("lg") {
     padding: 30px 40px 40px;
   }
+}
+
+.background-wrap{
+  min-width: 100%;
 }
 
 table {
