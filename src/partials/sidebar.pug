@@ -16,7 +16,7 @@ mixin menuItems(items)
     nav.menu
       button(class="close-menu-btn js-menu-close" type="button" aria-label="Close menu" aria-expanded="false")
         svg.close-btn-icon(width="24" height="24")
-          use(href="img/sprite.svg#icon-close")
+          use(href="/img/sprite.svg#icon-close")
 
       a.logo(href="./index.html")
         svg.logo-icon(width="37" height="37")
@@ -26,11 +26,11 @@ mixin menuItems(items)
     
       +menuItems([
         { label: "Dashboard", href: "./index.html", icon: "icon-key-square" },
-        { label: "Product", href: "", icon: "icon-d-square"},
+        { label: "Product", href: "./product.html", icon: "icon-d-square"},
         { label: "Customers", href: "./customers.html", icon: "icon-user-square", current: true },
-        { label: "Income", href: "", icon: "icon-wallet-money" },
-        { label: "Promote", href: "", icon: "icon-discount-shape" },
-        { label: "Help", href: "", icon: "icon-message-question" }
+        { label: "Income", href: "./income.html", icon: "icon-wallet-money" },
+        { label: "Promote", href: "./promote.html", icon: "icon-discount-shape" },
+        { label: "Help", href: "./help.html", icon: "icon-message-question" }
       ])
 
     .user-wrap
