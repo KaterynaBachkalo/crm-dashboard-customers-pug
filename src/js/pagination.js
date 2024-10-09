@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const pages = document.querySelectorAll(".pagination-page");
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
+
+  if (pages.length === 0 || !prevBtn || !nextBtn) {
+    return; 
+  }
+
   let currentPage = 1;
   const totalPages = 40;
 
