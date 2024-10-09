@@ -14,11 +14,19 @@ const toggleMenu = () => {
 };
 
 const openMenu = () => {
+  if (!tableWrap || !table) {
+    return
+  }
+  
   tableWrap.classList.add("hidden");
   table.classList.add("hidden");
 };
 
 const closeMenu = () => {
+  if (!tableWrap || !table) {
+    return
+  }
+
   if (tableWrap.classList.contains("hidden")) {
     tableWrap.classList.remove("hidden");
     table.classList.remove("hidden");
