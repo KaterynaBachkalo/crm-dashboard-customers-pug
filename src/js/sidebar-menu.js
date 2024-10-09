@@ -2,10 +2,11 @@ const menuItems = document.querySelectorAll(".menu-link");
 
 const setActiveMenuLink = () => {
   const currentPath = window.location.pathname;
+  console.log("currentPath", currentPath);
 
   menuItems.forEach((item) => {
     const itemHref = new URL(item.getAttribute("href"), window.location.origin).pathname;
-
+console.log("itemHref", itemHref);
     if (itemHref === currentPath) {
       item.classList.add("current");
     } else {
