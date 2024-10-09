@@ -17,8 +17,12 @@ export default defineConfig(({ command }) => {
 
       rollupOptions: {
         input: {
-          main: './src/index.pug',
-          customers: "./src/customers.pug"
+          dashboard: './src/index.pug',
+          product: './src/product.pug',
+          customers: "./src/customers.pug",
+          income: "./src/income.pug",
+          promote: "./src/promote.pug",
+          help: "./src/help.pug"
         },
         output: {
           manualChunks(id) {
