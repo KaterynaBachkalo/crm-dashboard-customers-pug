@@ -5,7 +5,7 @@ const setActiveMenuLink = () => {
   console.log("currentPath", currentPath);
 
   menuItems.forEach((item) => {
-    const itemHref = new URL(item.getAttribute("href"), window.location.origin).pathname;
+    const itemHref = new URL(item.getAttribute("href"), window.location).pathname;
 console.log("itemHref", itemHref);
     if (itemHref === currentPath) {
       item.classList.add("current");
