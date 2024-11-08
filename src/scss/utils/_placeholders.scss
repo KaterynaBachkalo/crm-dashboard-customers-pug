@@ -29,6 +29,10 @@
   @include mx.font(12, 12, -1, 500);
 }
 
-%sub-title{
+%sub-title {
   @include mx.font(10, 15, -1, 500);
+}
+
+%table-text-error {
+  @include mx.font(16, 21, -1, 500);
 }
