@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@macropygia/vite-plugin-pug-static": "^0.0.20",
+    "express": "^4.21.1",
     "node-html-parser": "^6.1.13",
     "rollup": "^4.24.0",
     "sass": "^1.79.3",

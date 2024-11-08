@@ -12,6 +12,34 @@ export default defineConfig(({ command }) => {
     },
     root: "src",
     
+
+    plugins: [
+      svgSpritePlugin({
+        symbolId: "icon-[name]",
+        include: ["**/src/img/*.svg"],
+      }),
+      injectHTML(),
+      pugPlugin({
+        buildOptions: { basedir: "./src"},
+        serveOptions: { basedir: "./src" },
+      }),
+      FullReload(["./src/**/**.pug", "./src/**.pug", "./src/**/**.html", "./src/data/table_data.json"]),
+      ViteImageOptimizer({
+        exclude: /^sprite.svg$/,
+        png: {
+          quality: 60,
+        },
+        jpeg: {
+          quality: 60,
+        },
+        jpg: {
+          quality: 60,
+        },
+        webp: {
+          quality: 60,
+        },
+      }),
+    ],
     build: {
       sourcemap: true,
 
@@ -37,34 +65,6 @@ export default defineConfig(({ command }) => {
       emptyOutDir: true,
       assetsInlineLimit: 0,
     },
-    plugins: [
-      svgSpritePlugin({
-        symbolId: "icon-[name]",
-        include: ["**/src/img/*.svg"],
-      }),
-      injectHTML(),
-      pugPlugin({
-        buildOptions: { basedir: "./src" },
-        serveOptions: { basedir: "./src" },
-      }),
-      FullReload(["./src/**/**.pug", "./src/**.pug", "./src/**/**.html"]),
-      ViteImageOptimizer({
-        exclude: /^sprite.svg$/,
-        png: {
-          quality: 60,
-        },
-        jpeg: {
-          quality: 60,
-        },
-        jpg: {
-          quality: 60,
-        },
-        webp: {
-          quality: 60,
-        },
-      }),
-    ],
-
     base: command === "serve"? "/customers.html": "/crm-dashboard-customers-pug/customers.html",
   };
 });
